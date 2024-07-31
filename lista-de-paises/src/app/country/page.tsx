@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../../page.module.css";
+import styles from "../page.module.css"
 
 async function getData(countryName: string) {
   const res = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);

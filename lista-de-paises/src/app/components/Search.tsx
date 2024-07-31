@@ -1,5 +1,6 @@
 'use client'
 import  {useSearchParams, usePathname, useRouter}  from "next/navigation"
+import styles from '../page.module.css'
 
 export default function Search({placeholder}: {placeholder: string}){
     const searchParams = useSearchParams()
@@ -21,9 +22,10 @@ export default function Search({placeholder}: {placeholder: string}){
     }
     return(
         <div>
-            <label htmlFor="search">Search</label>
+            <label htmlFor="search"></label>
 
-            <input type="text"  placeholder={placeholder}
+            <input type="text"
+            className={styles.searchBar}  placeholder={placeholder}
             onChange={(e) => handleSearch(e.target.value)}
             defaultValue={searchParams.get('query')?.toString()}/>
 

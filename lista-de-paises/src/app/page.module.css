@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: var(--gray-1);
 }
 
-.header{
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,11 +17,18 @@
   text-align: center;
 }
 
-.header h1{
+.header h1 {
   font-size: 36px;
 }
 
-.ul, .ol{
+.allCountries {
+  width: 1200px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ul,
+.ol {
   display: flex;
   list-style-type: none;
   padding: 0;
@@ -36,27 +44,24 @@
   border-radius: 12px;
 }
 
-.allCountries{
-  max-width: 1200px;
-}
 .li {
-  width: 240px;
+  width: 200px;
 }
 
-.li:hover{
+.li:hover {
   background-color: var(--gray-2);
 }
 
-.flag{
-  width: 240px;
+.flag {
+  width: 160px;
 }
 
-.countryContent{
+.countryContent {
   width: 1200px;
   margin: auto;
 }
 
-.countryInfo{
+.countryInfo {
   display: flex;
   width: 100vw;
   background-color: var(--gray-4);
@@ -64,72 +69,71 @@
   gap: 20px;
 }
 
-.countryInfo h2{
+.countryInfo h2 {
   font-size: 32px;
   font-weight: bolder;
 }
 
-.countryTitle{
+.countryTitle {
   margin-left: 24px;
 }
 
-.countryTitle p{
+.countryTitle p {
   margin-bottom: 20px;
 }
 
-.countryPage{
+.countryPage {
   display: flex;
   justify-content: center;
 }
 
-.capital{
+.capital {
 }
 
-.countryMoreInfo{
+.countryMoreInfo {
   gap: 40px;
   margin-bottom: 0;
-  
 }
 
-.countryRegion{
+.countryRegion {
   margin: 76px 0 8px 0;
 }
 
-.countryRegion h5{
+.countryRegion h5 {
   font-size: 20px;
   font-weight: 600;
 }
 
-.countryRegion h6{
+.countryRegion h6 {
   font-size: 16px;
   font-weight: 600;
 }
 
-.countryMoreInfo h4{
+.countryMoreInfo h4 {
   font-size: 24px;
   font-weight: bold;
 }
 
-.countryMoreInfo p{
+.countryMoreInfo p {
   font-size: 16px;
   font-weight: 500;
 }
 
-.countryConnections{
+.countryConnections {
   background-color: var(--gray-1);
 }
 
-.countryConnections h1{
+.countryConnections h1 {
   font-size: 24px;
   font-weight: 700;
   padding-top: 48px;
 }
 
-.countryConnections .flag{
+.countryConnections .flag {
   width: 200px;
 }
 
-.countryConnections h3{
+.allCountries h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
@@ -137,20 +141,47 @@
   text-decoration: none;
   color: var(--gray-8);
 }
-.countryFrontier, .countryLanguage{
+
+.countryConnections h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-wrap: pretty;
+  text-decoration: none;
+  color: var(--gray-8);
+}
+.countryFrontier,
+.countryLanguage {
   margin: 0 24px 20px 44px;
   border-bottom: 1px solid var(--gray-5);
 }
 
-.link{
+.link {
   text-decoration: none;
 }
 
-.textError{
+.textError {
   margin: 20px 0;
   font-size: 20px;
   font-weight: 800;
   color: #f21115;
+}
+
+.searchBar {
+  width: 100%;
+  box-sizing: boder-box;
+  outline: none;
+  padding: 8px;
+  font-size: 20px;
+  margin-top: 20px;
+  border: 1px solid var(--gray-4);
+  border-radius: 4px;
+}
+
+.searchBar:focus, .searchBar:hover{
+  background-color: var(--gray-2);
+  outline: none;
+  border: 1px solid var(--gray-9);
 }
 
 /* Mobile */
@@ -160,9 +191,9 @@
   }
   .header {
     height: 60px; /* Adjust header height */
-    
   }
-  .ul, .ol {
+  .ul,
+  .ol {
     flex-direction: column; /* Display items in a single column */
   }
   .li {
