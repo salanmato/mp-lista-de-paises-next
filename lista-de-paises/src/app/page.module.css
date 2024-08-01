@@ -118,7 +118,6 @@
   font-weight: 500;
 }
 
-
 .countryConnections h1 {
   font-size: 24px;
   font-weight: 700;
@@ -261,13 +260,18 @@
     text-align: center;
   }
 
-  .countryRegion{
+  .countryRegion {
     margin-top: 24px;
   }
 
-
-  .countryFrontier{
+  .countryFrontier {
     text-align: center;
+  }
+
+  .textError {
+    margin: 12px 0;
+    font-size: 12px;
+    font-weight: 600;
   }
 }
 
