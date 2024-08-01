@@ -34,7 +34,6 @@
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
-  background-color: var(--gray-1);
 }
 
 .li {
@@ -49,7 +48,7 @@
 }
 
 .li:hover {
-  background-color: var(--gray-2);
+  background-color: var(--gray-3);
 }
 
 .flag {
@@ -119,9 +118,6 @@
   font-weight: 500;
 }
 
-.countryConnections {
-  background-color: var(--gray-1);
-}
 
 .countryConnections h1 {
   font-size: 24px;
@@ -178,7 +174,8 @@
   border-radius: 4px;
 }
 
-.searchBar:focus, .searchBar:hover{
+.searchBar:focus,
+.searchBar:hover {
   background-color: var(--gray-2);
   outline: none;
   border: 1px solid var(--gray-9);
@@ -188,28 +185,89 @@
 @media (max-width: 600px) {
   .main {
     flex-direction: column; /* Already column, but might need adjustments */
+    width: 100vw;
   }
   .header {
     height: 60px; /* Adjust header height */
   }
-  .ul,
-  .ol {
+
+  .allCountries {
+    width: 100%;
+  }
+
+  .searchBar {
+    width: 100%;
+  }
+
+  .ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;
     flex-direction: column; /* Display items in a single column */
   }
   .li {
-    width: 100%; /* Full width for list items */
-    margin: 16px; /* Adjust margins */
+    width: 80vw; /* Full width for list items */
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-wrap: wrap;
   }
   .flag {
-    width: 100%; /* Full width for flags */
+    width: 160px; /* Full width for flags */
   }
   /* Other adjustments for mobile layout */
 
+  .allCountries h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-wrap: pretty;
+    text-decoration: wrap;
+    color: var(--gray-8);
+  }
+
+  .countryContent {
+    width: 100vw;
+  }
+
+  .countryConnections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    background-color: var(--gray-2);
+  }
+
   .countryInfo {
     flex-direction: column; /* Display information in a single column */
+    box-sizing: border-box;
+    padding: 20px 0;
   }
   .countryTitle {
-    margin-left: 0; /* Remove left margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+
+  .countryMoreInfo {
+    text-align: center;
+  }
+
+  .countryRegion{
+    margin-top: 24px;
+  }
+
+
+  .countryFrontier{
+    text-align: center;
   }
 }
 

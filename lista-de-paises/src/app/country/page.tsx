@@ -96,7 +96,7 @@ export default async function Page({
             <div className={styles.countryRegion}>
               <h4 className={styles.capital}>
                 Capital:{" "}
-                {country.capital.map((capital: string) => {
+                {country.capital && country.capital.map((capital: string) => {
                   return <span>{`${capital} `}</span>;
                 })}
               </h4>
